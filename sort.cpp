@@ -11,6 +11,7 @@ int* sort(int* a, int n){
         }
     }
     
+    
     int* newArr = new int[size];
     for(int i = 0; i < n; i++){
         if(i % 2 == 1){
