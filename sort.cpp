@@ -11,7 +11,6 @@ int* sort(int* a, int n){
         }
     }
     
-    
     int* newArr = new int[size];
     for(int i = 0; i < n; i++){
         if(i % 2 == 1){
@@ -29,13 +28,24 @@ int* sort(int* a, int n){
     }
     return newArr;
 }
-void print(int* arr){
+void print(int* arr, int n){
+    int size = 0;
+    for(int i = 0; i < n; i++){
+        if(i % 2 == 1){
+            size++;
+        }
+    }
     
+    for(int i = 0; i < size; i++){
+        cout << arr[i] << " ";
+    }
 }
 
 int main(){
     int n = 5;
     int arr[n] = {1, 3, 4, 7, 5};
-    cout << *sort(arr, n) << " ";
+    int* newArr = sort(arr, n);
+    print(newArr, n);
+    
     return 0;
 }
